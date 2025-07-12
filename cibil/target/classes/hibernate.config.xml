@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/cibil</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">0410</property>
+
+        <!-- JDBC connection pool settings -->
+        <property name="hibernate.connection.pool_size">5</property>
+
+
+
+        <!-- SQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <!-- Show SQL in console -->
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- Automatically create or update tables -->
+        <property name="hibernate.hbm2ddl.auto">validate</property>
+
+
+
+        <!-- Mapping files or annotated classes -->
+        <mapping class="com.jocata.cibil.cibil.entity.Customers"/>
+        <mapping class="com.jocata.cibil.cibil.entity.Accounts"/>
+        <mapping class="com.jocata.cibil.cibil.entity.Address"/>
+        <mapping class="com.jocata.cibil.cibil.entity.CbilScores"/>
+        <mapping class="com.jocata.cibil.cibil.entity.CreditReports"/>
+        <mapping class="com.jocata.cibil.cibil.entity.Enquries"/>
+        <mapping class="com.jocata.cibil.cibil.entity.Remarks"/>
+
+
+
+
+    </session-factory>
+</hibernate-configuration>
